@@ -1,6 +1,32 @@
-body{
-    background-color: aqua;
-}
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    text-align: center;
+  }
+
+  /* Styles for screens smaller than or equal to 600px */
+  @media (max-width: 600px) {
+    body {
+      background-color: lightgreen;
+      font-size: 18px;
+    }
+  }
+
+  /* Styles for screens larger than 600px and up to 1024px */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+      background-color: lightcoral;
+      font-size: 20px;
+    }
+  }
+
+  /* Styles for screens larger than 1024px */
+  @media (min-width: 1025px) {
+    body {
+      background-color: lightgoldenrodyellow;
+      font-size: 22px;
+    }
+  }
 
 .heading{
     font-size: small;
@@ -17,6 +43,29 @@ Targets a single element with a specific id attribute. Prefixed with a hash (#).
 Targets elements that are descendants of a specified element. */
 
 div p{
+    background-image: url('https://images.unsplash.com/photo-1547628641-ec2098bb5812?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    padding: 5px;
+    background-size: cover;
+    background-position: top right;
     font-family:'Times New Roman', Times, serif;
-    font-size: smaller;
+    font-size: 10px;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: none;
+    line-height: 10px;
+    border: 1px double  black;
+    border-radius: 10px;
 }
+
+/* background-color: Sets the background color.
+
+background-image: Sets a background image.
+
+background-position: Specifies the position of the background image.
+
+background-size: Defines the size of the background image.
+
+background-repeat: Determines how the background image repeats.
+
+background: A shorthand property for setting all background properties. */
+
