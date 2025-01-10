@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -15,35 +15,36 @@
     padding: 100px;
     background: #fff;
     transition: 0.5s;
-}
+} */
 header{
-    position: absolute;
-    top:0;
-    left:0;
+    /* position: absolute; */
+    /* top:0; */
+    /* left:0; */
     width: 100%;
-    display: flex;
+    /* display: flex; */
     padding: 20px 100px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 header .logo{
     color: #333;
-    text-decoration: none;
-    font-size: 2em;
+    /* text-decoration: none; */
+    text-decoration: double;
+    font-size: 20px;
     font-weight: 700;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 header .logo span{
     color: orange;
-    font-size: 2em;
+    font-size: 1.5em;
 }
-header ul{
+/* header ul{
     display: flex;
     gap:40px;
-}
-header ul li{
+} */
+/* header ul li{
     list-style: none;
-}
+} */
 header ul li a{
     text-decoration: none;
     font-weight: 500;
