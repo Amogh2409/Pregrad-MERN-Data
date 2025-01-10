@@ -1,0 +1,22 @@
+body{
+    background-color: aqua;
+}
+
+.heading{
+    font-size: small;
+}
+/* ID Selector 
+Targets a single element with a specific id attribute. Prefixed with a hash (#). */
+ /* #para{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+}  */
+
+
+/* Descendant Selector 
+Targets elements that are descendants of a specified element. */
+
+div p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: smaller;
+}
