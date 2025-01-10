@@ -1,0 +1,181 @@
+In CSS, the background property allows you to style the background of HTML elements. This property can be used to set background colors, images, positions, and more. Here’s a comprehensive guide to the background property with code examples:
+
+Background Color
+The background-color property sets the background color of an element.
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head> <meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Background Color Example</title> 
+<style> .background-color { background-color: lightblue; } 
+</style> </head> 
+<body>
+<div class="background-color">This div has a light blue background color.</div> 
+</body> 
+</html> 
+
+
+Background Image
+The background-image property sets one or more background images for an element.
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Background Image Example</title> 
+<style> .background-image { background-image: url('https://via.placeholder.com/150'); 
+background-size: cover; background-position: center; } </style> 
+</head> 
+<body> 
+<div class="background-image">This div has a background image.</div> 
+</body> 
+</html> 
+
+
+Background Position
+The background-position property sets the position of a background image. Values can be keywords like top, center, bottom, or specific coordinates.
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head> <meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Background Position Example</title> 
+
+<style> .background-position {
+
+ background-image: url('https://via.placeholder.com/150'); 
+
+background-position: top right; background-repeat: no-repeat; } </style>
+
+ </head> 
+
+<body>
+
+ <div class="background-position">This div has a background image positioned at the top right.</div> 
+
+</body> 
+
+</html> 
+Background Size
+The background-size property specifies the size of the background image. Common values are auto, cover, and contain.
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head> 
+
+<meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Background Size Example</title> 
+
+<style> 
+
+.background-size {
+
+ background-image: url('https://via.placeholder.com/150');
+
+ background-size: cover; /* or contain */ background-position: center; } 
+
+</style> </head>
+
+ <body> 
+
+<div class="background-size">This div has a background image that covers the entire area.</div> 
+
+</body> 
+
+</html> 
+Background Repeat
+The background-repeat property specifies if and how the background image repeats. Values can be repeat, no-repeat, repeat-x, or repeat-y.
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head> <meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Background Repeat Example</title>
+
+ <style> 
+
+.background-repeat { 
+
+background-image: url('https://via.placeholder.com/150');
+
+ background-repeat: repeat-x; /* or repeat, no-repeat, repeat-y */ } </style> 
+
+</head> 
+
+<body>
+
+ <div class="background-repeat">This div has a background image repeating horizontally.</div> 
+
+</body>
+
+ </html> 
+Shorthand Background Property
+The background property is a shorthand property that allows you to set all the background properties in one declaration.
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head> 
+
+<meta charset="UTF-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Shorthand Background Property Example</title> 
+
+<style> .background-shorthand { 
+
+background: url('https://via.placeholder.com/150') no-repeat center center/cover lightgray; } </style> 
+
+</head> 
+
+<body> 
+
+<div class="background-shorthand">This div uses the shorthand background property.</div> 
+
+</body> 
+
+</html> 
+
+
+Summary
+background-color
+
+: Sets the background color.
+
+background-image
+
+: Sets a background image.
+
+background-position
+
+: Specifies the position of the background image.
+
+background-size
+
+: Defines the size of the background image.
+
+background-repeat
+
+: Determines how the background image repeats.
+
+background
+
+: A shorthand property for setting all background properties.
+
+These properties allow you to create complex and visually appealing backgrounds for your web elements.

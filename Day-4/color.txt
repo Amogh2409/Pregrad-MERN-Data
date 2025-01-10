@@ -1,0 +1,158 @@
+CSS provides several ways to define colors for styling HTML elements. You can specify colors using names, hex codes, RGB values, RGBA values, HSL values, HSLA values, or even CSS variables. Here's an overview of each method:
+
+1. Named Colors
+CSS supports a range of color names, such as red, blue, green, etc.
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head> <meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Named Colors Example</title> 
+
+<style> .named-color { color: blue; background-color: lightgray; } </style>
+
+ </head> 
+
+<body> 
+
+<p class="named-color">This text is blue with a light gray background.</p> 
+
+</body> 
+
+</html> 
+2. Hexadecimal Colors
+Hexadecimal colors are defined with a # followed by six hexadecimal digits. The format is #RRGGBB, where RR, GG, and BB represent the red, green, and blue color values.
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head> <meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>Hexadecimal Colors Example</title> 
+
+<style> .hex-color { color: #ff6347; /* Tomato color */ background-color: #f0f8ff; /* Alice blue */ } </style> 
+
+</head> 
+
+<body>
+
+<p class="hex-color">This text is tomato color with an Alice blue background.</p> 
+
+</body> 
+
+</html> 
+3. RGB Colors
+RGB colors are defined using the rgb() function, which takes three parameters representing red, green, and blue values ranging from 0 to 255.
+
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head> <meta charset="UTF-8"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>RGB Colors Example</title> 
+
+<style> .rgb-color { color: rgb(255, 99, 71); /* Tomato color */
+
+ background-color: rgb(240, 248, 255); /* Alice blue */ } 
+
+</style> 
+
+</head>
+
+ <body> 
+
+<p class="rgb-color">This text is tomato color with an Alice blue background.</p> 
+
+</body> 
+
+</html> 
+4. RGBA Colors
+RGBA colors are similar to RGB but include an alpha channel for opacity. The rgba() function takes four parameters: red, green, blue, and alpha (0 to 1).
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+ <head> <meta charset="UTF-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<title>RGBA Colors Example</title> 
+
+<style>
+
+ .rgba-color { 
+
+color: rgba(255, 99, 71, 0.8); /* Tomato color with 80% opacity */ 
+
+background-color: rgba(240, 248, 255, 0.5); /* Alice blue with 50% opacity */
+
+ } 
+
+</style> 
+
+</head> 
+
+<body>
+
+ <p class="rgba-color">This text is tomato color with 80% opacity and an Alice blue background with 50% opacity.</p> 
+
+</body>
+
+ </html> 
+5. HSL Colors
+HSL colors are defined using the hsl() function, which takes three parameters: hue (0 to 360 degrees), saturation (0% to 100%), and lightness (0% to 100%).
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>HSL Colors Example</title> <style> .hsl-color { color: hsl(9, 100%, 64%); /* Tomato color */ background-color: hsl(208, 100%, 97%); /* Alice blue */ } </style> </head> <body> <p class="hsl-color">This text is tomato color with an Alice blue background.</p> </body> </html> 
+6. HSLA Colors
+HSLA colors are similar to HSL but include an alpha channel for opacity. The hsla() function takes four parameters: hue, saturation, lightness, and alpha (0 to 1).
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>HSLA Colors Example</title> <style> .hsla-color { color: hsla(9, 100%, 64%, 0.8); /* Tomato color with 80% opacity */ background-color: hsla(208, 100%, 97%, 0.5); /* Alice blue with 50% opacity */ } </style> </head> <body> <p class="hsla-color">This text is tomato color with 80% opacity and an Alice blue background with 50% opacity.</p> </body> </html> 
+7. CSS Variables
+CSS Variables (custom properties) allow you to store and reuse values throughout your stylesheet. They are defined with a -- prefix.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>CSS Variables Example</title> <style> :root { --primary-color: #ff6347; /* Tomato */ --background-color: #f0f8ff; /* Alice blue */ } .variable-color { color: var(--primary-color); background-color: var(--background-color); } </style> </head> <body> <p class="variable-color">This text uses CSS variables for color.</p> </body> </html> 
+Summary
+Named Colors
+
+: Simple names like red, blue, green.
+
+Hexadecimal Colors: #RRGGBB
+
+, e.g., #ff6347.
+
+RGB Colors: rgb(R, G, B)
+
+, e.g., rgb(255, 99, 71).
+
+RGBA Colors: rgba(R, G, B, A)
+
+, e.g., rgba(255, 99, 71, 0.8).
+
+HSL Colors: hsl(H, S%, L%)
+
+, e.g., hsl(9, 100%, 64%).
+
+HSLA Colors: hsla(H, S%, L%, A)
+
+, e.g., hsla(9, 100%, 64%, 0.8).
+
+CSS Variables: Custom properties defined with --
+
+, e.g., var(--primary-color).
