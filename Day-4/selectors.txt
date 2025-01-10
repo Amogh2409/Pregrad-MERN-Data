@@ -1,0 +1,234 @@
+CSS selectors are patterns used to select the HTML elements you want to style. They allow you to target elements based on various criteria such as element type, class, id, attributes, and more. Here’s a breakdown of some common CSS selectors with examples:
+
+Basic Selectors
+Element Selector
+Targets all elements of a specific type.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Element Selector Example</title>
+     <style>
+         p {
+             color: blue;
+         }
+     </style>
+ </head>
+ <body>
+     <p>This is a paragraph.</p>
+     <p>This is another paragraph.</p>
+ </body>
+ </html>
+ 
+Class Selector
+Targets elements with a specific class attribute. Prefixed with a dot (.).
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Class Selector Example</title>
+     <style>
+         .highlight {
+             background-color: yellow;
+         }
+     </style>
+ </head>
+ <body>
+     <p class="highlight">This paragraph has a highlight class.</p>
+     <p>This paragraph does not have the highlight class.</p>
+ </body>
+ </html>
+ 
+ID Selector
+Targets a single element with a specific id attribute. Prefixed with a hash (#).
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ID Selector Example</title>
+     <style>
+         #unique {
+             color: red;
+         }
+     </style>
+ </head>
+ <body>
+     <p id="unique">This paragraph has a unique id.</p>
+     <p>This paragraph does not have an id.</p>
+ </body>
+ </html>
+ 
+Combinators
+Descendant Selector
+Targets elements that are descendants of a specified element.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Descendant Selector Example</title>
+     <style>
+         div p {
+             color: green;
+         }
+     </style>
+ </head>
+ <body>
+     <div>
+         <p>This paragraph is inside a div.</p>
+     </div>
+     <p>This paragraph is not inside a div.</p>
+ </body>
+ </html>
+ 
+Child Selector
+Targets elements that are direct children of a specified element.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Child Selector Example</title>
+     <style>
+         ul > li {
+             color: purple;
+         }
+     </style>
+ </head>
+ <body>
+     <ul>
+         <li>This list item is a direct child of ul.</li>
+         <li>This list item is also a direct child of ul.</li>
+     </ul>
+     <div>
+         <ul>
+             <li>This list item is not a direct child of ul.</li>
+         </ul>
+     </div>
+ </body>
+ </html>
+ 
+Adjacent Sibling Selector
+Targets an element that is immediately preceded by a specified element.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Adjacent Sibling Selector Example</title>
+     <style>
+         h1 + p {
+             color: orange;
+         }
+     </style>
+ </head>
+ <body>
+     <h1>This is an h1 element.</h1>
+     <p>This paragraph is immediately after an h1 element.</p>
+     <p>This paragraph is not immediately after an h1 element.</p>
+ </body>
+ </html>
+ 
+General Sibling Selector
+Targets all elements that are siblings of a specified element.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>General Sibling Selector Example</title>
+     <style>
+         h2 ~ p {
+             color: teal;
+         }
+     </style>
+ </head>
+ <body>
+     <h2>This is an h2 element.</h2>
+     <p>This paragraph is a sibling of h2.</p>
+     <p>This paragraph is also a sibling of h2.</p>
+     <div>
+         <p>This paragraph is not a sibling of h2.</p>
+     </div>
+ </body>
+ </html>
+ 
+Attribute Selectors
+Attribute Selector
+Targets elements based on the presence or value of an attribute.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Attribute Selector Example</title>
+     <style>
+         input[type="text"] {
+             border: 1px solid blue;
+         }
+         a[href^="https"] {
+             color: green;
+         }
+     </style>
+ </head>
+ <body>
+     <input type="text" placeholder="Text input">
+     <input type="password" placeholder="Password input">
+     <a href="https://www.example.com">Secure Link</a>
+     <a href="http://www.example.com">Non-secure Link</a>
+ </body>
+ </html>
+ 
+Pseudo-classes
+Pseudo-class Selector
+Targets elements in a specific state or position.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pseudo-class Selector Example</title>
+     <style>
+         a:hover {
+             color: red;
+         }
+         p:first-child {
+             font-weight: bold;
+         }
+     </style>
+ </head>
+ <body>
+     <a href="#">Hover over this link</a>
+     <p>This is the first paragraph.</p>
+     <p>This is another paragraph.</p>
+ </body>
+ </html>
+ 
+Pseudo-elements
+Pseudo-element Selector
+Targets a specific part of an element.
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pseudo-element Selector Example</title>
+     <style>
+         p::first-line {
+             font-weight: bold;
+         }
+         p::first-letter {
+             font-size: 2em;
+             color: red;
+         }
+     </style>
+ </head>
+ <body>
+     <p>This is a paragraph with special styling on the first line and the first letter.</p>
+ </body>
+ </html>
+ 
+These selectors allow you to target elements with precision, making it possible to apply styles based on various criteria.
