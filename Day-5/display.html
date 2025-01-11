@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Display Example</title>
+    <style>
+        /* Make the parent container a Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-around; /* Space between the items */
+    align-items: center; /* Align items vertically */
+    padding: 20px;
+    height: 100vh;
+    background-color: #f0f0f0; /* Overall container background */
+}
+
+/* Style each individual container */
+.item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    transition: 0.3s; /* Smooth hover effect */
+}
+
+/* Add unique backgrounds to each container */
+.item1 {
+    background-color: #ffe4c4;
+}
+.item2 {
+    background-color: #ffb6c1;
+}
+.item3 {
+    background-color: #b0e0e6;
+}
+
+/* Style the images */
+.item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Add hover effect for fun */
+.item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.206); 
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="item item1">
+            <img src="https://css-tricks.com/wp-content/uploads/2018/10/02-items.svg" alt="Sample 1">
+            <p>Container1</p>
+        </div>
+        <div class="item item2">
+            <img src="https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg" alt="Sample 2">
+            <p>Container2</p>
+        </div>
+        <div class="item item3">
+            <img src="https://css-tricks.com/wp-content/uploads/2018/10/align-self.svg" alt="Sample 3">
+            <p>Container3</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

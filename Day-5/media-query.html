@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Example</title>
+    <style>
+
+        .container {
+            background-color: lightgrey;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Media query for screens 600px or less */
+        @media (max-width: 600px) {
+            .container {
+                background-color: lightcoral;
+                padding: 10px;
+                margin: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <p>This container's styles change based on the screen width.</p>
+    </div>
+</body>
+
+</html>

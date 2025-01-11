@@ -1,0 +1,107 @@
+Flexbox is a powerful CSS layout module designed for distributing space and aligning items within a container. It provides an efficient way to create complex layouts and handle alignment and spacing. Here’s a guide to understanding and using Flexbox:
+
+1. Basic Flex Container
+To use Flexbox, you need to set the display property of a container to flex. This turns the container into a flex container and its children into flex items.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Flexbox Container Example</title> <style> .flex-container { display: flex; background-color: lightgrey; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; flex: 1; } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item">Item 2</div> <div class="flex-item">Item 3</div> </div> </body> </html> 
+
+
+2. Flex Direction
+The flex-direction property defines the direction in which the flex items are placed in the flex container. Possible values are row, column, row-reverse, and column-reverse.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Flex Direction Example</title> <style> .flex-container { display: flex; flex-direction: column; /* Changes direction to vertical */ background-color: lightgrey; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item">Item 2</div> <div class="flex-item">Item 3</div> </div> </body> </html> 
+
+
+3. Flex Wrap
+The flex-wrap property controls whether flex items should wrap onto multiple lines. Values include nowrap, wrap, and wrap-reverse.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Flex Wrap Example</title> <style> .flex-container { display: flex; flex-wrap: wrap; /* Allows wrapping of items */ background-color: lightgrey; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; flex: 1 1 100px; /* Flex-grow, flex-shrink, and flex-basis */ } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item">Item 2</div> <div class="flex-item">Item 3</div> <div class="flex-item">Item 4</div> <div class="flex-item">Item 5</div> </div> </body> </html> 
+
+
+
+4. Flex Flow
+The flex-flow property is a shorthand for flex-direction and flex-wrap.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Flex Flow Example</title> <style> .flex-container { display: flex; flex-flow: row wrap; /* Shorthand for flex-direction and flex-wrap */ background-color: lightgrey; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; flex: 1 1 150px; /* Flex-grow, flex-shrink, and flex-basis */ } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item">Item 2</div> <div class="flex-item">Item 3</div> <div class="flex-item">Item 4</div> <div class="flex-item">Item 5</div> </div> </body> </html> 
+
+
+
+5. Justify Content
+The justify-content property aligns flex items along the main axis (horizontal by default). Values include flex-start, center, flex-end, space-between, and space-around.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Justify Content Example</title> <style> .flex-container { display: flex; justify-content: center; /* Center items horizontally */ background-color: lightgrey; height: 100px; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item">Item 2</div> <div class="flex-item">Item 3</div> </div> </body> </html> 
+
+
+
+6. Align Items
+The align-items property aligns flex items along the cross axis (vertical by default). Values include stretch, flex-start, center, flex-end, and baseline.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Align Items Example</title> <style> .flex-container { display: flex; align-items: center; /* Align items vertically */ background-color: lightgrey; height: 100px; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item">Item 2</div> <div class="flex-item">Item 3</div> </div> </body> </html> 
+
+
+
+7. Align Content
+The align-content property aligns flex lines within the flex container when there is extra space on the cross axis. Values include flex-start, center, flex-end, space-between, space-around, and stretch.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Align Content Example</title> <style> .flex-container { display: flex; flex-wrap: wrap; align-content: space-between; /* Distributes space between lines */ background-color: lightgrey; height: 200px; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; flex: 1 1 150px; /* Flex-grow, flex-shrink, and flex-basis */ } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item">Item 2</div> <div class="flex-item">Item 3</div> <div class="flex-item">Item 4</div> <div class="flex-item">Item 5</div> </div> </body> </html> 
+
+
+
+8. Flex Item Properties
+Flex items can also be controlled individually using the flex, flex-grow, flex-shrink, and flex-basis properties.
+
+flex
+
+: Shorthand for flex-grow, flex-shrink, and flex-basis.
+
+<!DOCTYPE html>
+
+<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Flex Item Properties Example</title> <style> .flex-container { display: flex; background-color: lightgrey; height: 100px; } .flex-item { background-color: lightcoral; padding: 10px; margin: 5px; flex: 2; /* Grow twice as much as other items */ } .flex-item-small { flex: 1; /* Grow equally with other items */ } </style> </head> <body> <div class="flex-container"> <div class="flex-item">Item 1</div> <div class="flex-item-small">Item 2</div> <div class="flex-item-small">Item 3</div> </div> </body> </html> 
+Summary
+display: flex
+
+: Defines a flex container.
+
+flex-direction
+
+: Sets the direction of the flex items.
+
+flex-wrap
+
+: Controls wrapping of flex items.
+
+flex-flow
+
+: Shorthand for flex-direction and flex-wrap.
+
+justify-content
+
+: Aligns items along the main axis.
+
+align-items
+
+: Aligns items along the cross axis.
+
+align-content
+
+: Aligns flex lines within the container.
+
+Flex item properties
+
+: Control individual item behavior.
+
+Flexbox is versatile and can handle complex layout scenarios with ease. Experiment with these properties to create responsive and well-aligned designs.

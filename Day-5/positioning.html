@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolute Positioning</title>
+  <style>
+    .container {
+      position: fixed; /* This becomes the reference point */
+      width: 300px;
+      top: 250px;
+      height: 200px;
+      background-color: lightblue;
+    }
+
+    .box {
+      position: absolute; /* Positioned relative to the container */
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 50px;
+      background-color: coral;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Absolute</div>
+  </div>
+</body>
+</html>
