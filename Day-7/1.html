@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to JS</title>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("Hello to the Developer who's checking this website");
+            // Single Line Comment
+
+            /*
+                Multi
+                Line
+                Comment
+            
+            function greet(name){
+                return `Hello, ${name}!`;
+            }
+            console.log(greet("Amogh"));*/
+
+            const header = document.getElementById('h1');
+            header.textContent = "Welcome Everyone!";
+            header.style.color = "darkred";
+
+            const para = document.querySelector('h5');
+            para.textContent = "Hey lorem 500";
+            para.style.color = "darkred";
+
+
+
+            const element = document.querySelector('.paragraph');
+            element.innerHTML = "Hello";
+            // alert(header.nodeName);
+
+            console.log(element);
+
+            const d = document.createElement('h2');
+            d.textContent = "HEllo WOrld HeyHgtddfhdfgdffgytyutytytutyutytytyfgfg";
+            d.classList.add('new-element');
+
+            const container = document.body;
+            container.appendChild(d);
+
+            console.log(d);
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1 id="h1">
+    </h1>
+    <h5 class="h5">
+
+    </h5>
+
+    <p class="paragraph">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem quos, autem sapiente id, quam inventore ea ipsa
+        ut corrupti consequatur necessitatibus doloremque corporis a sint cum recusandae est magnam, error esse ad
+        beatae omnis. Repellendus harum optio voluptatum amet officiis labore rem eum, eligendi, a maiores fuga ab ipsa
+        sint animi distinctio sunt minima neque culpa cum voluptatibus quibusdam, tenetur blanditiis expedita! Tempore
+        eius laboriosam numquam placeat eaque amet vero itaque voluptates iusto saepe adipisci optio perferendis sed
+        possimus recusandae facere voluptas, maxime ad eos harum natus voluptatibus esse omnis est. Perspiciatis facere
+        veniam obcaecati autem? Inventore repellat sunt nesciunt.
+    </p>
+
+    <!-- 
+    pdf = Basic Notes;
+    NOtes -> read -> pracitce;
+
+    next -> further concepts; -->
+
+
+</body>
+
+</html>
