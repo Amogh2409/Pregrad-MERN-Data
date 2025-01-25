@@ -132,15 +132,15 @@
 //   3. Write a function to greet someone by their name.  
 //   4. Create a function to calculate the factorial of a number.  
 //   5. Write a function to find the largest of three numbers.  
-//  6. Write a function to return the square of a number.  
-//  7. Create a function to convert Celsius to Fahrenheit.  
-//  8. Write a function to calculate the sum of all numbers in an array.  
-//  9. Create a function to reverse a string.  
-//  10. Write a function to check if a number is positive, negative, or zero.  
-//  11. Create a function to find the smallest number in an array.  
-//  12. Write a function to count the number of vowels in a string.  
-//  13. Create a function to check if a string is a palindrome.  
-//  14. Write a function to calculate the area of a rectangle given its length and width.  
+//   6. Write a function to return the square of a number.  
+//   7. Create a function to convert Celsius to Fahrenheit.  
+//   8. Write a function to calculate the sum of all numbers in an array.  
+//   9. Create a function to reverse a string.  
+//   10. Write a function to check if a number is positive, negative, or zero.  
+//   11. Create a function to find the smallest number in an array.  
+//   12. Write a function to count the number of vowels in a string.  
+//   13. Create a function to check if a string is a palindrome.  
+//   14. Write a function to calculate the area of a rectangle given its length and width.  
 //  15. Create a function to check if a given year is a leap year.
 
 
