@@ -141,7 +141,7 @@
 //   12. Write a function to count the number of vowels in a string.  
 //   13. Create a function to check if a string is a palindrome.  
 //   14. Write a function to calculate the area of a rectangle given its length and width.  
-//  15. Create a function to check if a given year is a leap year.
+//   15. Create a function to check if a given year is a leap year.
 
 
 
