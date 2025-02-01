@@ -122,3 +122,6 @@ fruits.splice(4, 1, "mango");
 let sliced = fruits.slice(1,5);
 console.log(sliced);
 
+
+
+
