@@ -208,13 +208,123 @@ const person1 = {
 // person1.sayHelloArrow();
 
 
+// Lexical Scope
+
+// Lexical Scope means "where a variable is available in the code" and how JavaScript decides which variable to use when there are multiple with the same name
+
+// Think of a school:
+
+// A teacher (global scope) can enter any classroom and talk to any student.
+// A student (local scope) can only talk to classmates inside their room but not students in another class.
+
+// let school = "ABC School"; // Global variable
+
+// function getSchoolName() {
+//     console.log(school); // Can access global variable
+// }
+
+// getSchoolName(); // Output: ABC School
+// console.log(school); // Output: ABC School
+
+
+// function showStudent() {
+//     let student = "John"; // Local variable
+    // console.log(student);
+// }
+
+// showStudent(); // Output: John
+// console.log(student); // ❌ ERROR: student is not defined
+
+
+
+// Nested Scope (Functions Inside Functions)
+// Inner functions can access variables from outer functions (but not the other way around!).
+
+
+
+function outer(){
+    let teacher = "Mrs. Smith";
+
+    function inner(){
+        let student = "Amogh";
+        console.log(teacher);
+
+    }
+    inner();
+
+    // console.log(student);
+}
+
+// outer();
+
+
+// let and const variables are only available inside the {} block they are declared in.
+
+// if (true) {
+//     let age = 20;
+//     console.log(age); // ✅ Works here
+// }
+
+// console.log(age); // ❌ ERROR: age is not defined
+
+
+// function test() {
+//     let x = 10;
+//     if (true) {
+//         let x = 20;
+//         console.log(x);
+//     }
+//     console.log(x);
+// }
+
+// test();
+
+
+
+
+// Immutability in JS
+// Immutability means not changing the original data. Instead of modifying existing variables, we create new ones.
+
+// 📌 Why is Immutability Important?
+// 1️⃣ Prevents unexpected changes (bugs).
+// 2️⃣ Helps in functional programming (used in React & Redux).
+// 3️⃣ Makes debugging easier (no accidental modifications).
+
+// let person3 = {name : "Alice", age: 25};
+
+// let newPerson = {...person3, age: 26};
+// console.log(person3);
+// console.log(newPerson);
 
 
 
 
 
+// let numbers = [1, 2, 3];
+// let newNumbers = [...numbers, 4]; // ✅ Creates a new array
+// console.log(newNumbers); // [1, 2, 3, 4]
+// console.log(numbers);    // [1, 2, 3] (Unchanged)
 
 
+
+
+// function updateAge(person) {
+//     person.age = 30; // ❌ Changes the original object
+// }
+
+// let user1 = { name: "Bob", age: 25 };
+// updateAge(user1);
+// console.log(user1); // { name: "Bob", age: 30 } (Changed)
+
+
+function updateAge(person) {
+    return { ...person, age: 30 }; // ✅ Returns a new object
+}
+
+let user1 = { name: "Bob", age: 25 };
+let updatedUser = updateAge(user);
+console.log(updatedUser); // { name: "Bob", age: 30 }
+console.log(user);        // { name: "Bob", age: 25 } (Unchanged)
 
 
 
