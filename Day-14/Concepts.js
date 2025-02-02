@@ -149,10 +149,71 @@ const car = {
 // JavaScript import/export allows you to split code into multiple files, making it modular and reusable.
 
 
-console.log(Addition(5,3));
-console.log(subtraction(5,3));
-console.log(multiply(5,3));
-console.log(divide(5,3));
+// console.log(Addition(5,3));
+// console.log(subtraction(5,3));
+// console.log(multiply(5,3));
+// console.log(divide(5,3));
+
+
+
+
+// Arrow Functions
+// Arrow functions (=>) provide a shorter and cleaner way to write functions in JavaScript.
+
+
+// Normal Function
+
+// function add(a, b) {
+//     return a + b;
+// }
+// console.log(add(3, 5)); // Output: 8
+
+
+// const add = (a, b) => a + b;
+// console.log(add(3, 5)); // Output: 8
+
+
+// const greet = name => `Hello, ${name}!`;
+// console.log(greet("Alice")); // Output: Hello, Alice!
+
+
+// function sayHello(){
+//     return "Hello World";
+// }
+
+// const sayHello = () => "Hello, World!";
+// console.log(sayHello()); // Output: Hello, World!
+
+// const multiply = (a, b) => {
+//     const result = a * b;
+//     return result;
+// };
+// console.log(multiply(4, 6)); // Output: 24
+
+
+let name1 = "Amit";
+//This Keyword
+
+const person1 = {
+    name: "Amogh",
+    sayHello: function(){
+        console.log(`Hello, my name is ${this.name}`)
+    },
+    sayHelloArrow: () => {
+        console.log(`Hello, my name is ${this.name}`)
+    }
+}
+
+// person1.sayHello();
+// person1.sayHelloArrow();
+
+
+
+
+
+
+
+
 
 
 
