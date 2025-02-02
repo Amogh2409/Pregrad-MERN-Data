@@ -28,3 +28,8 @@
 
 // Function (instruction)
 //  button - Click  - page refresh
+
+
+// import { Addition } from "../Day-14/math.js";
+
+// console.log(Addition(7,6));
