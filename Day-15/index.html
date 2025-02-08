@@ -7,18 +7,29 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
     
 </head>
 <body>
     <h6>hello</h6>
     <div class="root" id="root"></div>
-
+    <div>
+        <div><b>Item:</b> <em>Mango Juice</em></div>
+        <div><b>Amount:</b> <em>30.00</em></div>
+        <div><b>Spend Date:</b> <em>2020-10-10</em></div>
+        <div><b>Category:</b> <em>Food</em></div>
+     </div>
 
 
 
 
     <script type="text/babel">
+
+        var data = "red";
         function Clock(){
             const [time, setTime] = React.useState(new Date().toLocaleTimeString());
         
@@ -34,7 +45,7 @@
             return (
                 <div>
                     <p>
-                        The Current time is {time}
+                        The Current time is <span className = {data}>{time}</span>
                     </p>
                 </div>
             )
@@ -43,3 +54,100 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!-- reactComponents - small chunk of user interface in a webpage -->
+<!-- the primary job of a component is to render its user interface and update it whenever its internal state is changed -->
+
+<!-- button clicks, page update -->
+
+<!-- React Component - Properties, Events, State -->
+
+
+<!-- Properties - Enables the component to receive input 
+Event - Event Enable the component to manage DOM events and end user iteraction
+state - Stateful updates the UI with respect to the State
+
+Function Component
+
+function function_name(argument_name) {
+   function_body;
+}
+
+
+
+
+class Component
+
+class class_name extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+
+Function HEllo(){
+return '<div> Hello World </div>'}
+
+
+
+class Hello extends React.Component {         
+   render() { 
+      return ( 
+         <div>Hello</div> 
+      ); 
+   }
+}
+
+
+
+import React from 'react';
+import './ExpenseEntryItem.css';
+
+class ExpenseEntryItem extends React.Component {
+   render() {
+      return (
+         <div>
+            <div><b>Item:</b> <em>Mango Juice</em></div>
+            <div><b>Amount:</b> <em>30.00</em></div>
+            <div><b>Spend Date:</b> <em>2020-10-10</em></div>
+            <div><b>Category:</b> <em>Food</em></div>
+         </div>
+      );
+   }
+}
+export default ExpenseEntryItem;
+
+
+file  - index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ExpenseEntryItem from './components/ExpenseEntryItem'
+
+ReactDOM.render(
+   <React.StrictMode>
+      <ExpenseEntryItem />
+   </React.StrictMode>,
+   document.getElementById('root')
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
