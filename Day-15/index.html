@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    
+</head>
+<body>
+    <h6>hello</h6>
+    <div class="root" id="root"></div>
+
+
+
+
+
+    <script type="text/babel">
+        function Clock(){
+            const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+        
+        
+            React.useEffect(() => {
+                const interval = setInterval(()=>{
+                    setTime(new Date().toLocaleTimeString());
+                }, 1000);
+
+                return () => clearInterval(interval);
+            }, []);
+
+            return (
+                <div>
+                    <p>
+                        The Current time is {time}
+                    </p>
+                </div>
+            )
+        }
+        ReactDOM.render(<Clock />, document.getElementById("root"));
+    </script>
+</body>
+</html>

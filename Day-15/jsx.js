@@ -7,3 +7,10 @@ var canGreet = true;
 if(canGreet){
     greeting = <h1>hello react</h1>
 }
+
+function Greeting(){
+    return <h1>Hello React</h1>
+}
+
+greeting = Greeting()
+
