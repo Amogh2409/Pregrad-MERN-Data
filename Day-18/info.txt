@@ -1,0 +1,22 @@
+Before hooks, if you needed state or lifecycle methods, you had to use class components. Hooks allow you to write functional components that are simpler and easier to read.
+
+useState -  Adds state to functional components.
+
+            const [count, setCount] = useState(0);
+
+
+useEffect - Handles side effects in functional components ( like data fetching, subscriptions)
+
+                useEffect(() => {
+                // Code to run on component mount/update
+                return () => {
+                // Cleanup code when component unmounts or before re-running the effect
+                    };
+                }, [/* dependency array */]);
+
+
+
+useContent
+useReducer
+useRef
+useMemo
