@@ -1,23 +1,136 @@
 // import MyComponent from './MyComponent';
-import './App.css';
-import React from 'react';
-import MovieList from './components/MovieList';
+// import './App.css';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import MovieListDemo from './components/Movielist2';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header style={{textAlign: "center", marginTop: "20px"}}>
-        <h1>
-          My Movie Website
-        </h1>
-      </header>
-      <MovieList />
+
+export default function App() {
+  const [movies, setMovies] = useState([]);
+  const [search, setSearch] = useState("");
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
+  useEffect(() => {
+
+    // api call
+    setTimeout(() => {
+      setMovies([
+        {
+          id: 1,
+          title: 'Inception',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',
+          rating: 8.8,
+          description: 'A mind-bending thriller by Christopher Nolan.',
+        },
+        {
+          id: 2,
+          title: 'The Dark Knight',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0MF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg',
+          rating: 9.0,
+          description:
+            'Batman faces off against the Joker in this critically acclaimed superhero film.',
+        },
+        {
+          id: 3,
+          title: 'Interstellar',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BZjdkOTU3YzMtNTk5Yi00NzU3LTg3YzItNzUxMjk0ZWZkNTk5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg',
+          rating: 8.6,
+          description: 'A journey beyond the stars to save humanity from extinction.',
+        },
+        {
+          id: 4,
+          title: 'Fight Club',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BMmEzNTFjYzEtNmI4YS00MmMwLTkxNTEtMWJkZjI1YzRkOWU1XkEyXkFqcGdeQXVyNDYzNTM2ODg@._V1_.jpg',
+          rating: 8.8,
+          description: 'An underground fight club that evolves into something much more.',
+        },
+        {
+          id: 5,
+          title: 'Pulp Fiction',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BNGNhMDIzN2YtNmI4Yy00MTQ4LThmYWEtZGYwOTQzMjI3N2RhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg',
+          rating: 8.9,
+          description:
+            'A quirky and unconventional narrative that intertwines multiple stories.',
+        },
+        {
+          id: 6,
+          title: 'The Shawshank Redemption',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmRhMC00ZDI3LWFmNTEtODM1ZmJkZDIzZGE3XkEyXkFqcGdeQXVyNDYzNTM2ODg@._V1_.jpg',
+          rating: 9.3,
+          description: 'The story of hope and friendship inside a prison.',
+        },
+        {
+          id: 7,
+          title: 'The Godfather',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmYtYTAwZS00ZjQ5LWE2NzItYzY2ZjZmY2EwYWM5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg',
+          rating: 9.2,
+          description: 'A powerful story of family and crime in America.',
+        },
+        {
+          id: 8,
+          title: 'The Matrix',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BMjExMTcwNzg5MF5BMl5BanBnXkFtZTcwMzY3NzM3OQ@@._V1_.jpg',
+          rating: 8.7,
+          description: 'A computer hacker learns about the true nature of reality.',
+        },
+        {
+          id: 9,
+          title: 'Forrest Gump',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BNWIwODlhMDUtMDcyMi00YWYzLWFmOTUtN2NlNzQwY2QzYzYzXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg',
+          rating: 8.8,
+          description:
+            'The touching story of an ordinary man who achieves extraordinary things.',
+        },
+        {
+          id: 10,
+          title: 'Gladiator',
+          posterUrl:
+            'https://m.media-amazon.com/images/M/MV5BMjA4ODk5MjM2MF5BMl5BanBnXkFtZTcwNzM0MTYzMw@@._V1_.jpg',
+          rating: 8.5,
+          description:
+            'A Roman general seeks revenge after being betrayed and reduced to slavery.',
+        },
+      ]);
+    }, 1000);
+  }, []);
+
+  // Memoizing the filterd movie list
+  const filteredMovies = useMemo(() => {
+    console.log("Filtering Movies....");
+    return movies.filter((movie) => movie.title.toLowerCase().includes(search.toLowerCase()));
+  }, [movies, search]);
+
+
+  const handleMovieSelect = useCallback((movie) => {
+    setSelectedMovie(movie);
+}, []);
+
+  return(
+    <div>
+      <h1>Movie App</h1>
+      <input type="text" placeholder='Search movies....'
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}/>
+
+      <MovieListDemo movies={filteredMovies} onSelectMovie = {handleMovieSelect} />
+      {selectedMovie && (
+            <div>
+                <h2>Selected Movie:</h2>
+                <p><strong>{selectedMovie.title}</strong> - Rating: {selectedMovie.rating}</p>
+            </div>
+        )}
     </div>
   );
 }
-
-export default App;
 
 
 
