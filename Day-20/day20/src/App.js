@@ -1,30 +1,52 @@
-
-import './App.css';
-// import { ThemeProvider } from './component/ThemeContext';
-// import ThemeToggle from './component/ThemeToggle';
-
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './component/Home';
-// import About from './component/About';
-import UserProfile from './component/UserProfiles';
+import Dashboard from "./component/dashboard";
 
 
-function App() {
-  return (
-
-<Router>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/user/:id' element={<UserProfile />} />
-
-
-    </Routes>
-</Router>
-  );
+export default function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/dashboard/*" element={<Dashboard />} />
+            </Routes>
+        </Router>
+    );
 }
 
-export default App;
+
+
+
+
+
+
+// import './App.css';
+// // import { ThemeProvider } from './component/ThemeContext';
+// // import ThemeToggle from './component/ThemeToggle';
+
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Home from './component/Home';
+// // import About from './component/About';
+// import UserProfile from './component/UserProfiles';
+
+
+// function App() {
+//   return (
+
+// <Router>
+//     <Routes>
+//       <Route path='/' element={<Home />} />
+//       <Route path='/user/:id' element={<UserProfile />} />
+
+
+//     </Routes>
+// </Router>
+//   );
+// }
+
+// export default App;
 
 
 
