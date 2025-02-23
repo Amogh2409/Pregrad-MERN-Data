@@ -1,0 +1,35 @@
+1️⃣ React Fundamentals (Basic to Intermediate)
+✔️ JSX, Components (Functional & Class)     
+✔️ Props and State
+✔️ Handling Events in React
+✔️ Forms & Controlled Components
+
+2️⃣ Hooks (Core Concepts)
+✔️ useState (State Management)
+✔️ useEffect (Side Effects, API Calls)
+✔️ useRef (DOM Manipulation)
+✔️ useMemo and useCallback (Performance Optimization)
+
+3️⃣ Advanced React
+✔️ Context API (Global State Management)
+✔️ React Router (Client-side Routing)
+✔️ Higher Order Components (HOCs)
+✔️ Custom Hooks (Reusability of logic)
+
+4️⃣ Performance Optimization
+✔️ React.memo
+✔️ Lazy Loading & Code Splitting
+✔️ Error Boundaries
+
+5️⃣ React with APIs
+✔️ Fetching data with fetch & Axios
+✔️ Handling API requests & responses
+
+6️⃣ State Management (Choose One)
+✔️ Context API (For small/medium apps)
+✔️ Redux (For large-scale apps)
+
+7️⃣ React Deployment & Best Practices
+✔️ Deployment using Vercel, Netlify, or Firebase
+✔️ Best Practices (Folder structure, Performance optimizations)
+
