@@ -1,92 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './component/Home';
-import Dashboard from "./component/dashboard";
+import { AuthProvider } from "./context/AuthContext";
+import Home from "./components/Home";
+import Dashboard from "./components/DashBoard";
+import Login from "./components/Login";
+import ProtectedRoute from "./components/ProtectedRoutes";
 
 
-export default function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/dashboard/*" element={<Dashboard />} />
-            </Routes>
-        </Router>
-    );
+export default function App(){
+  return (
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/login" element={<Login />}/>
+
+            {/* Protected Path (Onlt accessible if you logged in) */}
+
+            <Route element={<ProtectedRoute />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
+
+        </Routes>
+      </Router>
+    </AuthProvider>
+  )
 }
-
-
-
-
-
-
-
-// import './App.css';
-// // import { ThemeProvider } from './component/ThemeContext';
-// // import ThemeToggle from './component/ThemeToggle';
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Home from './component/Home';
-// // import About from './component/About';
-// import UserProfile from './component/UserProfiles';
-
-
-// function App() {
-//   return (
-
-// <Router>
-//     <Routes>
-//       <Route path='/' element={<Home />} />
-//       <Route path='/user/:id' element={<UserProfile />} />
-
-
-//     </Routes>
-// </Router>
-//   );
-// }
-
-// export default App;
-
-
-
-
-
-
-    // <ThemeProvider>
-    //   <div>
-    //     <h1>
-    //       Context Api Example
-    //     </h1>
-
-    //     <ThemeToggle />
-    //   </div>
-    // </ThemeProvider>
-
-
-
-      /* <nav>
-        <Link to="/">
-        
-            <h4 style={{margin: 5}}>Home</h4>
-        </Link>
-        <Link to="/about">About</Link>
-      </nav> */
-
-  /* <nav>
-        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>
-          Home
-        </NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>
-          About
-        </NavLink>
-      </nav>
-
-
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/about' element={<About />}></Route>
-      </Routes>
-    </Router> */
-    // <a> reloads the entire page
-    // Link  changes the url without relaoding the page
