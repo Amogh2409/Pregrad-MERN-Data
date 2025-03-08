@@ -1,0 +1,9 @@
+React - frontend 
+
+backend - store data process data - Node js(Express)
+
+Js - frontend , backend
+async -> multiple requests handle
+
+npm modules
+Node package manager
