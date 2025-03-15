@@ -6,3 +6,15 @@ db.users.find();
 show('dbs')
 show('Collections')
 show('users')
+
+use('userDb');
+db.users.insertMany([
+    { name: "A", age: 20, state: "Haryana" }, 
+    { name: "B", age: 30, state: "Mumbai" }, 
+    { name: "C", age: 25, state: "Kerala" }, 
+    { name: "D", age: 28, state: "Punjab" }]) 
+db.users.find(); 
+db.users.find({ age: { $gt: 23 } });
+db.users.find({ state: "Mumbai" });
+
+db.getCollectionNames();
