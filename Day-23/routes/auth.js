@@ -22,7 +22,8 @@ router.post("/register", async (req, res) => {
             password: hashedPassword,
         });
 
-        await newUser.save();
+        await newUser.save(); // this ```xml
+// saves the user to the database
         res.status(201).json({ message: "User registered successfully" })
     }
     catch (error) {

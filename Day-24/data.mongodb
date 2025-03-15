@@ -1,0 +1,8 @@
+use('myDatabase')
+
+db.users.insertOne({ name: "Amogh Saxena", age: 24, city: "Indore" });
+
+db.users.find();
+show('dbs')
+show('Collections')
+show('users')
