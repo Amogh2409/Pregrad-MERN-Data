@@ -1,0 +1,5 @@
+
+
+-> Signup  -> token  
+
+login -> id pass -> token (middleware) -> todos
